@@ -1,0 +1,10 @@
+steps:
+  - plugins:
+      - docker#v5.10.0:
+          image: "mesosphere/aws-cli"
+          always-pull: true
+          command: ["ls", "/"]
+
+  - label: ":lock: Snyk Test"
+    command: snyk test --severity-threshold=high --fail-on=all --docker mesosphere/aws-cli
+    key: snyk-test
