@@ -4,7 +4,10 @@ steps:
       - docker#v5.10.0:
           image: "alpine"
           always-pull: true
-
+    commands:
+      - echo "Hello Alpine"
+      - ls -la
+      
   - label: ":lock: Snyk Test"
     command: snyk test --severity-threshold=high --fail-on=all --docker mesosphere/aws-cli
     key: snyk-test
