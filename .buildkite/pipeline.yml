@@ -2,7 +2,7 @@ steps:
   - label: "Pulling image"
     plugins:
       - docker#v5.10.0:
-          image: "mesosphere/aws-cli"
+          image: "alpine"
           always-pull: true
 
   - label: ":lock: Snyk Test"
