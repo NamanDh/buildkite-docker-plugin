@@ -9,5 +9,5 @@ steps:
       - ls -la
       
   - label: ":lock: Snyk Test"
-    command: snyk test --severity-threshold=high --fail-on=all --docker mesosphere/aws-cli
+    command: snyk test --severity-threshold=high --fail-on=all --docker alpine:latest
     key: snyk-test
