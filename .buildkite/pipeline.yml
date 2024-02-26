@@ -7,7 +7,7 @@ steps:
       queue: "ec2_queue"
 
 steps:
-  - command: echo "The 2 parameters equals Plain: \$PARAMETER_ONE & Other: \$PARAMETER_TWO"
+  - command: echo "The 2 parameters equals Plain -> \$PARAMETER_ONE & Other -> \$PARAMETER_TWO"
     plugins:
       - aws-ssm#v1.0.0:
           parameters:
