@@ -5,6 +5,13 @@ steps:
       - whoami
     agents:
       queue: "ec2_queue"
+
+steps:
+  - command: echo "Param One equals \$PARAMETER_ONE"
+    plugins:
+      - aws-ssm#v1.0.0:
+          parameters:
+            PARAMETER_ONE: bk_key_plain
       
   - label: "Pulling image"
     plugins:
