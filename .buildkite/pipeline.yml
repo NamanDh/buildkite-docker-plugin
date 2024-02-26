@@ -12,6 +12,8 @@ steps:
       - aws-ssm#v1.0.0:
           parameters:
             PARAMETER_ONE: bk_key_plain
+    agents:
+      queue: "ec2_queue"
       
   - label: "Pulling image"
     plugins:
