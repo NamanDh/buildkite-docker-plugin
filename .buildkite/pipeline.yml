@@ -1,5 +1,7 @@
 steps:
   - label: "Pulling image"
+    pre:
+      - whoami
     plugins:
       - docker#v5.10.0:
           image: "alpine"
