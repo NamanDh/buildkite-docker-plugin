@@ -7,7 +7,7 @@ steps:
     commands:
       - echo "Hello Alpine"
       - ls -la
-    agent:
+    agents:
       queue: "ec2_queue"
       
   - label: ":lock: Snyk Test"
