@@ -7,6 +7,8 @@ steps:
     commands:
       - echo "Hello Alpine"
       - ls -la
+    agent:
+      queue: "ec2_queue"
       
   - label: ":lock: Snyk Test"
     command: snyk test --severity-threshold=high --fail-on=all --docker alpine:latest
