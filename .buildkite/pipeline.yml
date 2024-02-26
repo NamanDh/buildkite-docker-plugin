@@ -1,7 +1,12 @@
 steps:
-  - label: "Pulling image"
-    pre:
+
+  - label: "Some random cmds"
+    commands:
       - whoami
+    agents:
+      queue: "ec2_queue"
+      
+  - label: "Pulling image"
     plugins:
       - docker#v5.10.0:
           image: "alpine"
@@ -15,3 +20,5 @@ steps:
   - label: ":lock: Snyk Test"
     command: snyk test --severity-threshold=high --fail-on=all --docker alpine:latest
     key: snyk-test
+    agents:
+      queue: "ec2_queue"
