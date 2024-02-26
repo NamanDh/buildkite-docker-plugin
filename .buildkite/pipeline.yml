@@ -13,8 +13,7 @@ steps:
       - aws-ssm#v1.0.0:
           parameters:
             PARAMETER_ONE: bk_key_plain
-            PARAMETER_TWO: bk_key
-            
+            PARAMETER_TWO: bk_key  
     agents:
       queue: "ec2_queue"
       
